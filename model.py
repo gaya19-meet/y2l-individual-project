@@ -6,5 +6,11 @@ from sqlalchemy import create_engine
 Base = declarative_base()
 
 # Write your classes here :
-class Product(Base):
-    pass
+class Link(Base):
+    __tablename__ = "link"
+    id = Column(Integer, primary_key=True)
+    subject = Column(String) #math? history? ...
+    type = Column(String) #liste,gme,visual
+    link = Column(String)
+    
+
