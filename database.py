@@ -1,9 +1,9 @@
-from models import *
+from model import *
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('sqlite:///database.db')
+engine = create_engine('sqlite:///database.db?check_same_thread=False')
 Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
@@ -12,7 +12,7 @@ session = DBSession()
 def create_link(type,subject,link): ####creats the links I actually need
 	link_object = Link(type=type, subject=subject,link=link)##### an object - instant of the class in the model.py
 	session.add(link_object)### adds the instant above to the databases
-    session.commit()##### ACTUALLY ADDS THE INSTANT 
+	session.commit()##### ACTUALLY ADDS THE INSTANT 
 
 def get_all_links_with_the_specific_type(type, subject):#all the links in the database with the specific type that I was looking for
 	links = session.query(Link).all() ###filters ?????
@@ -23,3 +23,14 @@ def get_all_links_with_the_specific_type(type, subject):#all the links in the da
 
 
 	return list_randomname
+
+
+create_link("Visual","math","www.google.com/math/visual")
+create_link("Listening","math","www.google.com/math/listening")
+create_link("Visual","hebrew","visual.hebrew")
+create_link("Visual","english","visual.english")
+create_link("Games","english","games.english")
+create_link("Listening","arabic","arabic.listening")
+create_link("Visual","arabic","arabic.visual")
+
+

@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>This Page Is For Visual Material</title>
+	<title>This Page Is For {{type_name}} Material</title>
 </head>
 <body>
-	<div>subject
-		<header> THE SUBJECT IS: {the name of the subject} </header>
-		<h1>1 link:  <a href="jtrheg"></a> </h1>
-		<h1>2 link:  <a href="mflekjererl"></a></h1>
-		<h1>3 link:  <a href="mdkdjkfhgjk"></a> </h1>
-		<h1>4 link:  <a href="jkgjkhb"></a> </h1>
-		<h1>5 link:  <a href="ndjkfernjfksn"></a> </h1>
-	</div>
+	<form action="/create" method="POST">
+    <input type="text" name="firstname" placeholder="First Name">
+    <br>
+    I like
+    <input type="radio" name="animal" value="cats">cats
+    <input type="radio" name="animal" value="dogs">dogs
+    <br>
+    <input type="submit" value="Submit">
+</form>
 
+	<div>
+		<div the subject is math!> 
+			{%if math_links_html!=[]%} <!-- if the list of mathws link isn't empty -->
+				<h1> THE SUBJECT IS: MATH </h1>
+				{%for link in math_links_html%} <!-- for every link (object), inside the list of the links -->
+				<h1>{{link.link}}  <a href="{{link.link}}"></a> </h1> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
+				{%endfor%}
+			{%endif%}	
+		</div>
+		<div the subject is hebrew!> 
+			{%if hebrew_links_html!=[]%} <!-- if the list of hebrew link isn't empty -->
+				<h1> THE SUBJECT IS: HEBREW </h1>
+				{%for link in hebrew_links_html%} <!-- for every link (object), inside the list of the links -->
+				<h1>{{link.link}}  <a href="{{link.link}}"></a> </h1> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
+				{%endfor%}	
+			{%endif%}	
+		</div>
+		<div the subject is english!>
+			{%if hebrew_links_html!=[]%} <!-- if the list of hebrew link isn't empty -->
+				<h1> THE SUBJECT IS: ENGLISH </h1>
+				{%for link in english_links_html%} <!-- for every link (object), inside the list of the links-->
+				<h1>{{link.link}}  <a href="{{link.link}}"></a> </h1> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
+				{%endfor%}
+			{%endif%}	
+		</div>
+		<div the subject is english!>
+			{%if hebrew_links_html!=[]%} <!-- if the list of hebrew link isn't empty -->
+				<h1> THE SUBJECT IS: ARABIC </h1>
+				{%for link in arabic_links_html%} <!-- for every link (object), inside the list of the links-->
+				<h1>{{link.link}}  <a href="{{link.link}}"></a> </h1> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
+				{%endfor%}
+			{%endif%}	
+		</div>
+	</div>
 </body>
 </html>
