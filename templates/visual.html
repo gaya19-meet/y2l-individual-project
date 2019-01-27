@@ -4,46 +4,52 @@
 	<title>This Page Is For {{type_name}} Material</title>
 </head>
 <body>
-	<form action="/create" method="POST">
-    <input type="text" name="firstname" placeholder="First Name">
-    <br>
-    I like
-    <input type="radio" name="animal" value="cats">cats
-    <input type="radio" name="animal" value="dogs">dogs
-    <br>
-    <input type="submit" value="Submit">
-</form>
-
 	<div>
 		<div the subject is math!> 
 			{%if math_links_html!=[]%} <!-- if the list of mathws link isn't empty -->
-				<h1> THE SUBJECT IS: MATH </h1>
+				<h2> THE SUBJECT IS: MATH </h2>
 				{%for link in math_links_html%} <!-- for every link (object), inside the list of the links -->
-				<h1>{{link.link}}  <a href="{{link.link}}"></a> </h1> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
+				<h2>{{link.link}}  <a href="{{link.link}}"></a> </h2> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
 				{%endfor%}
 			{%endif%}	
 		</div>
 		<div the subject is hebrew!> 
 			{%if hebrew_links_html!=[]%} <!-- if the list of hebrew link isn't empty -->
-				<h1> THE SUBJECT IS: HEBREW </h1>
+				<h2> THE SUBJECT IS: HEBREW </h2>
 				{%for link in hebrew_links_html%} <!-- for every link (object), inside the list of the links -->
-				<h1>{{link.link}}  <a href="{{link.link}}"></a> </h1> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
+				<h2>{{link.link}}  <a href="{{link.link}}"></a> </h2> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
 				{%endfor%}	
 			{%endif%}	
 		</div>
 		<div the subject is english!>
-			{%if hebrew_links_html!=[]%} <!-- if the list of hebrew link isn't empty -->
-				<h1> THE SUBJECT IS: ENGLISH </h1>
+			{%if english_links_html!=[]%} <!-- if the list of hebrew link isn't empty -->
+				<h2> THE SUBJECT IS: ENGLISH </h2>
 				{%for link in english_links_html%} <!-- for every link (object), inside the list of the links-->
-				<h1>{{link.link}}  <a href="{{link.link}}"></a> </h1> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
+				<h2>{{link.link}}  <a href="{{link.link}}"></a> </h2> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
 				{%endfor%}
 			{%endif%}	
 		</div>
-		<div the subject is english!>
-			{%if hebrew_links_html!=[]%} <!-- if the list of hebrew link isn't empty -->
-				<h1> THE SUBJECT IS: ARABIC </h1>
+		<div the subject is arabic!>
+			{%if arabic_links_html!=[]%} <!-- if the list of hebrew link isn't empty -->
+				<h2> THE SUBJECT IS: ARABIC </h2>
 				{%for link in arabic_links_html%} <!-- for every link (object), inside the list of the links-->
-				<h1>{{link.link}}  <a href="{{link.link}}"></a> </h1> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
+				<h2>{{link.link}}  <a href="{{link.link}}"></a> </h2> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
+				{%endfor%}
+			{%endif%}	
+		</div>
+		<div the subject is history!>
+			{%if history_links_html!=[]%} <!-- if the list of hebrew link isn't empty -->
+				<h2> THE SUBJECT IS: HISTORY </h2>
+				{%for link in history_links_html%} <!-- for every link (object), inside the list of the links-->
+				<h2>{{link.link}}  <a href="{{link.link}}"></a> </h2> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
+				{%endfor%}
+			{%endif%}	
+		</div>
+		<div the subject is biology!>
+			{%if biology_links_html!=[]%} <!-- if the list of hebrew link isn't empty -->
+				<h2> THE SUBJECT IS: BIOLOGY </h2>
+				{%for link in biology_links_html%} <!-- for every link (object), inside the list of the links-->
+				<h2>{{link.link}}  <a href="{{link.link}}"></a> </h2> <!-- takes the variable link (and we put inside the variable -link- the actuall link we want)  -->
 				{%endfor%}
 			{%endif%}	
 		</div>

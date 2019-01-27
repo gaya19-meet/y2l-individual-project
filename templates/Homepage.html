@@ -5,14 +5,36 @@
 	
 </head>
 <body>
-		<h1>WELCOME TO EASY LEARNING ! ! ! </h1>
-		<h3>(and I didn't copy from EasyLicense)</h3>>
-		<p>here you can find multiple methods for learning!</p>> 
+		<h1> WELCOME TO EASY-LEARNING ! ! ! </h1>
+		<h3>(and I didn't copy from EasyLicense)</h3>
+		<p> here you can find multiple methods for learning!</p>
 		<a href="/Method/Visual"><!--  a link named Visual -->
 		<h1>VISUAL</h1></a>
 		<a href="/Method/Games">
 		<h1>GAMES</h1></a>
 		<a href="/Method/Listening">
 		<h1>LISTENING</h1></a>
+
+	<form action="/create" method="POST">
+	  <input type="text" name="link" placeholder="write the URL: ">
+	  <br>
+	  <fieldset id="type">
+	    <input type="radio" value="Visual" name="type"> VISUAL <br>
+	    <input type="radio" value="Games" name="type"> GAMES <br>
+	    <input type="radio" value="Listening" name="type"> LISTENING <br>
+	  </fieldset>
+	  <br>
+	  <fieldset id="subject">
+	 	<input type="radio" value="math" name="group2">MATH <br>
+	   	<input type="radio" value="hebrew" name="group2">HEBREW <br> 
+	    <input type="radio" value="english" name="group2">ENGLISH <br>
+	    <input type="radio" value="arabic" name="group2">ARABIC <br> 
+	   	<input type="radio" value="history" name="group2">HISTORY <br> 
+	    <input type="radio" value="biology" name="group2">BIOLOGY <br> 
+	  </fieldset>
+	  <br>
+	    <input type="submit" value="add"> <!--value  = the name -->
+	</form>
+
 </body>
 </html>
