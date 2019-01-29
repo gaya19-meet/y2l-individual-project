@@ -1,1 +1,9 @@
-Feel free to delete/rename this file and add more .css files in this folder.
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
